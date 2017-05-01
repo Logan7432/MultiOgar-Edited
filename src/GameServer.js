@@ -386,7 +386,7 @@ GameServer.prototype.getRandomColor = function() {
     };
 };
 
-GameServer.prototype.removeNode = function(node) {
+GameServer.prototype.removeNode = function(node, killer) {
     // Remove from quad-tree
     node.isRemoved = true;
     this.quadTree.remove(node.quadItem);
@@ -400,7 +400,17 @@ GameServer.prototype.removeNode = function(node) {
     
     // Special on-remove actions
     node.onRemove(this);
-};
+
+    if (node.owner && !node.owner.cells.length) {
+        if (killer && killer.owner != node.owner) {
+            for (var i in this.clients) {
+                var client = this.clients[i].playerTracker;
+                var message = node.owner._name + " was killed by " + killer.owner._name;
+                this.sendChatMessage(null, client, message);
+            }
+        }
+    }
+}
 
 GameServer.prototype.updateClients = function() {
     // check dead clients
@@ -767,7 +777,7 @@ GameServer.prototype.resolveCollision = function(m) {
     cell.killedBy = check;
 
     // Remove cell
-    this.removeNode(cell);
+    this.removeNode(cell, check);
 };
 
 GameServer.prototype.splitPlayerCell = function(client, parent, angle, mass) {
