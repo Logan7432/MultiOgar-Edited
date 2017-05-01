@@ -74,15 +74,6 @@ PacketHandler.prototype.handshake_onCompleted = function (protocol, key) {
     this.sendPacket(new Packet.ClearAll());
     this.sendPacket(new Packet.SetBorder(this.socket.playerTracker, this.gameServer.border, this.gameServer.config.serverGamemode, "MultiOgar-Edited " + this.gameServer.version));
     // Send welcome message
-    this.gameServer.sendChatMessage(null, this.socket.playerTracker, "MultiOgar-Edited " + this.gameServer.version);
-    if (this.gameServer.config.serverWelcome1)
-        this.gameServer.sendChatMessage(null, this.socket.playerTracker, this.gameServer.config.serverWelcome1);
-    if (this.gameServer.config.serverWelcome2)
-        this.gameServer.sendChatMessage(null, this.socket.playerTracker, this.gameServer.config.serverWelcome2);
-    if (this.gameServer.config.serverChat == 0)
-        this.gameServer.sendChatMessage(null, this.socket.playerTracker, "This server's chat is disabled.");
-    if (this.protocol < 4)
-        this.gameServer.sendChatMessage(null, this.socket.playerTracker, "WARNING: Protocol " + this.protocol + " assumed as 4!");
 };
 
 
