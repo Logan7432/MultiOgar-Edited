@@ -343,8 +343,6 @@ Commands.list = {
         // Sets color to the specified amount
         for (var i in gameServer.clients) {
             if (gameServer.clients[i].playerTracker.pID == id) {
-                var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 client.color = color; // Set color
                 for (var j in client.cells) {
                     client.cells[j].color = color;
