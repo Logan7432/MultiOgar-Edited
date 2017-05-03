@@ -25,85 +25,85 @@ var fillChar = function(data, char, fieldLength, rTL) {
 // Commands
 Commands.list = {
     help: function(gameServer, split) {
-       Logger.print("                       ┌────────────────────────────┐                       \n"+
-                    "                       │ LIST OF AVAILABLE COMMANDS │                       \n"+
-                    "┌──────────────────────┴────────────────────────────┴──────────────────────┐\n"+
-                    "│                         ----Players and AI----                           │\n"+
-                    "│                                                                          │\n"+
-                    "│ playerlist                   │ Get list of players, bots, ID's, etc      │\n"+
-                    "│ minion [PlayerID] [#] [name] │ Adds suicide minions to the server        │\n"+
-                    "│ addbot [number]              │ Adds bots to the server                   │\n"+
-                    "│ kickbot [number]             │ Kick a number of bots - No value= all gone│\n"+
-                    "│ kick [PlayerID]              │ Kick player or bot by client ID           │\n"+
-                    "│ kickall                      │ Kick all players and bots                 │\n"+
-                    "│ kill [PlayerID]              │ Kill the player by client ID              │\n"+
-                    "│ killall                      │ Kills everyone                            │\n"+
-                    "│                                                                          │\n"+
-                    "│                          ----Player Commands----                         │\n"+
-                    "│                                                                          │\n"+
-                    "│ spawn [entity] [pos] [mass]  │ Spawns an entity                          │\n"+
-                    "│ mass [PlayerID] [mass]       │ Set cell(s) mass by client ID             │\n"+
-                    "│ merge [PlayerID]             │ Merge all client's cells                  │\n"+
-                    "│ spawnmass [PlayerID] [mass]  │ Sets a player's spawn mass                │\n"+
-                    "│ freeze [PlayerID]            │ Freezes a player                          │\n"+
-                    "│ speed [PlayerID]             │ Sets a player's base speed                │\n"+
-                    "│ color [PlayerID] [R] [G] [B] │ Set cell(s) color by client ID            │\n"+
-                    "│ name [PlayerID] [name]       │ Change cell(s) name by client ID          │\n"+
-                    "│ skin [PlayerID] [string]     │ Change cell(s) skin by client ID          │\n"+
-                    "│ rec [PlayerID]               │ Gives a player instant-recombine + more   │\n"+
-                    "│ split [PlayerID] [Amount]    │ Forces a player to split                  │\n"+
-                    "│ tp [X] [Y]                   │ Teleports player(s) to XY coordinates     │\n"+
-                    "│ replace [PlayerID] [entity]  │ Replaces a player with an entity          │\n"+
-                    "│ pop [PlayerID]               │ Pops a player with a virus                │\n"+
+       Logger.print("                       â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                       \n"+
+                    "                       â”‚ LIST OF AVAILABLE COMMANDS â”‚                       \n"+
+                    "â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”\n"+
+                    "â”‚                         ----Players and AI----                           â”‚\n"+
+                    "â”‚                                                                          â”‚\n"+
+                    "â”‚ playerlist                   â”‚ Get list of players, bots, ID's, etc      â”‚\n"+
+                    "â”‚ minion [PlayerID] [#] [name] â”‚ Adds suicide minions to the server        â”‚\n"+
+                    "â”‚ addbot [number]              â”‚ Adds bots to the server                   â”‚\n"+
+                    "â”‚ kickbot [number]             â”‚ Kick a number of bots - No value= all goneâ”‚\n"+
+                    "â”‚ kick [PlayerID]              â”‚ Kick player or bot by client ID           â”‚\n"+
+                    "â”‚ kickall                      â”‚ Kick all players and bots                 â”‚\n"+
+                    "â”‚ kill [PlayerID]              â”‚ Kill the player by client ID              â”‚\n"+
+                    "â”‚ killall                      â”‚ Kills everyone                            â”‚\n"+
+                    "â”‚                                                                          â”‚\n"+
+                    "â”‚                          ----Player Commands----                         â”‚\n"+
+                    "â”‚                                                                          â”‚\n"+
+                    "â”‚ spawn [entity] [pos] [mass]  â”‚ Spawns an entity                          â”‚\n"+
+                    "â”‚ mass [PlayerID] [mass]       â”‚ Set cell(s) mass by client ID             â”‚\n"+
+                    "â”‚ merge [PlayerID]             â”‚ Merge all client's cells                  â”‚\n"+
+                    "â”‚ spawnmass [PlayerID] [mass]  â”‚ Sets a player's spawn mass                â”‚\n"+
+                    "â”‚ freeze [PlayerID]            â”‚ Freezes a player                          â”‚\n"+
+                    "â”‚ speed [PlayerID]             â”‚ Sets a player's base speed                â”‚\n"+
+                    "â”‚ color [PlayerID] [R] [G] [B] â”‚ Set cell(s) color by client ID            â”‚\n"+
+                    "â”‚ name [PlayerID] [name]       â”‚ Change cell(s) name by client ID          â”‚\n"+
+                    "â”‚ skin [PlayerID] [string]     â”‚ Change cell(s) skin by client ID          â”‚\n"+
+                    "â”‚ rec [PlayerID]               â”‚ Gives a player instant-recombine + more   â”‚\n"+
+                    "â”‚ split [PlayerID] [Amount]    â”‚ Forces a player to split                  â”‚\n"+
+                    "â”‚ tp [X] [Y]                   â”‚ Teleports player(s) to XY coordinates     â”‚\n"+
+                    "â”‚ replace [PlayerID] [entity]  â”‚ Replaces a player with an entity          â”‚\n"+
+                    "â”‚ pop [PlayerID]               â”‚ Pops a player with a virus                â”‚\n"+
                     "| explode [PlayerID]           | Explodes a player into ejected mass       |\n"+
-                    "│                                                                          │\n"+
-                    "│                          ----Server Commands----                         │\n"+
-                    "│                                                                          │\n"+
-                    "│ pause                        │ Pause game, freeze all nodes              │\n"+
-                    "│ board [string] [string] ...  │ Set scoreboard text                       │\n"+
-                    "│ change [setting] [value]     │ Change specified settings                 │\n"+
-                    "│ reload                       │ Reload config, banlist, and role files    │\n"+
-                    "│ ban [PlayerID │ IP]          │ Bans a player(s) IP                       │\n"+
-                    "│ unban [IP]                   │ Unbans an IP                              │\n"+
-                    "│ banlist                      │ Get list of banned IPs.                   │\n"+
-                    "│ mute [PlayerID]              │ Mute player from chat by client ID        │\n"+
-                    "│ unmute [PlayerID]            │ Unmute player from chat by client ID      │\n"+
+                    "â”‚                                                                          â”‚\n"+
+                    "â”‚                          ----Server Commands----                         â”‚\n"+
+                    "â”‚                                                                          â”‚\n"+
+                    "â”‚ pause                        â”‚ Pause game, freeze all nodes              â”‚\n"+
+                    "â”‚ board [string] [string] ...  â”‚ Set scoreboard text                       â”‚\n"+
+                    "â”‚ change [setting] [value]     â”‚ Change specified settings                 â”‚\n"+
+                    "â”‚ reload                       â”‚ Reload config, banlist, and role files    â”‚\n"+
+                    "â”‚ ban [PlayerID â”‚ IP]          â”‚ Bans a player(s) IP                       â”‚\n"+
+                    "â”‚ unban [IP]                   â”‚ Unbans an IP                              â”‚\n"+
+                    "â”‚ banlist                      â”‚ Get list of banned IPs.                   â”‚\n"+
+                    "â”‚ mute [PlayerID]              â”‚ Mute player from chat by client ID        â”‚\n"+
+                    "â”‚ unmute [PlayerID]            â”‚ Unmute player from chat by client ID      â”‚\n"+
                     "| lms                          | Starts/ends last man standing             |\n"+
-                    "│                                                                          │\n"+
-                    "│                          ----Miscellaneous----                           │\n"+
-                    "│                                                                          │\n"+
-                    "│ clear                        │ Clear console output                      │\n"+
-                    "│ reset                        │ Removes all nodes and reimplement them    │\n"+
-                    "│ status                       │ Get server status                         │\n"+
-                    "│ debug                        │ Get/check node lengths                    │\n"+
-                    "│ exit                         │ Stops the server                          │\n"+
-                    "│ calc                         │ Get size/mass from a specified value      │\n"+
-                    "│                                                                          │\n"+
-                    "├──────────────────────────────────────────────────────────────────────────┤\n"+
-                    '│         Psst! Do "shortcuts" for a list of command shortcuts!            │\n'+
-                    "└──────────────────────────────────────────────────────────────────────────┘");
+                    "â”‚                                                                          â”‚\n"+
+                    "â”‚                          ----Miscellaneous----                           â”‚\n"+
+                    "â”‚                                                                          â”‚\n"+
+                    "â”‚ clear                        â”‚ Clear console output                      â”‚\n"+
+                    "â”‚ reset                        â”‚ Removes all nodes and reimplement them    â”‚\n"+
+                    "â”‚ status                       â”‚ Get server status                         â”‚\n"+
+                    "â”‚ debug                        â”‚ Get/check node lengths                    â”‚\n"+
+                    "â”‚ exit                         â”‚ Stops the server                          â”‚\n"+
+                    "â”‚ calc                         â”‚ Get size/mass from a specified value      â”‚\n"+
+                    "â”‚                                                                          â”‚\n"+
+                    "â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤\n"+
+                    'â”‚         Psst! Do "shortcuts" for a list of command shortcuts!            â”‚\n'+
+                    "â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜");
     },
     shortcuts: function(gameServer, split) {
-       Logger.print("                       ┌────────────────────────────┐                       \n"+
-                    "                       │ LIST OF COMMAND SHORTCUTS  │                       \n"+
-                    "┌──────────────────────┴──────┬─────────────────────┴──────────────────────┐\n"+
-                    "│ st                          │ Alias for status of server                 │\n"+
-                    "│ pl                          │ Alias for playerlist                       │\n"+
-                    "│ m                           │ Alias for mass                             │\n"+
-                    "│ sm                          │ Alias for spawnmass                        │\n"+
-                    "│ ka                          │ Alias for killall                          │\n"+
-                    "│ k                           │ Alias for kill                             │\n"+
-                    "│ mg                          │ Alias for merge                            │\n"+
-                    "│ s                           │ Alias for speed                            │\n"+
-                    "│ mn                          │ Alias for minion                           │\n"+
-                    "│ f                           │ Alias for freeze                           │\n"+
-                    "│ ab                          │ Alias for addbot                           │\n"+
-                    "│ kb                          │ Alias for kickbot                          │\n"+
-                    "│ c                           │ Alias for change                           │\n"+
-                    "│ n                           │ Alias for name                             │\n"+
-                    "│ rep                         │ Alias for replace                          │\n"+
+       Logger.print("                       â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                       \n"+
+                    "                       â”‚ LIST OF COMMAND SHORTCUTS  â”‚                       \n"+
+                    "â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”\n"+
+                    "â”‚ st                          â”‚ Alias for status of server                 â”‚\n"+
+                    "â”‚ pl                          â”‚ Alias for playerlist                       â”‚\n"+
+                    "â”‚ m                           â”‚ Alias for mass                             â”‚\n"+
+                    "â”‚ sm                          â”‚ Alias for spawnmass                        â”‚\n"+
+                    "â”‚ ka                          â”‚ Alias for killall                          â”‚\n"+
+                    "â”‚ k                           â”‚ Alias for kill                             â”‚\n"+
+                    "â”‚ mg                          â”‚ Alias for merge                            â”‚\n"+
+                    "â”‚ s                           â”‚ Alias for speed                            â”‚\n"+
+                    "â”‚ mn                          â”‚ Alias for minion                           â”‚\n"+
+                    "â”‚ f                           â”‚ Alias for freeze                           â”‚\n"+
+                    "â”‚ ab                          â”‚ Alias for addbot                           â”‚\n"+
+                    "â”‚ kb                          â”‚ Alias for kickbot                          â”‚\n"+
+                    "â”‚ c                           â”‚ Alias for change                           â”‚\n"+
+                    "â”‚ n                           â”‚ Alias for name                             â”‚\n"+
+                    "â”‚ rep                         â”‚ Alias for replace                          â”‚\n"+
                     "| e                           | Alias for explode                          |\n"+
-                    "└─────────────────────────────┴────────────────────────────────────────────┘");
+                    "â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜");
     },
     debug: function(gameServer, split) {
         // Count client cells
@@ -234,7 +234,7 @@ Commands.list = {
     banlist: function(gameServer, split) {
         Logger.print("Showing " + gameServer.ipBanList.length + " banned IPs: ");
         Logger.print(" IP              | IP ");
-        Logger.print("───────────────────────────────────");
+        Logger.print("â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€");
                       
         for (var i = 0; i < gameServer.ipBanList.length; i += 2) {
             Logger.print(" " + fillChar(gameServer.ipBanList[i], " ", 15) + " | " +
@@ -503,7 +503,6 @@ Commands.list = {
         for (var i in gameServer.clients) {
             if (gameServer.clients[i].playerTracker.pID == id) {
                 var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 for (var j in client.cells) {
                     client.cells[j].setSize(size);
                 }
@@ -579,7 +578,6 @@ Commands.list = {
         for (var i = 0; i < gameServer.clients.length; i++) {
             if (id == gameServer.clients[i].playerTracker.pID) {
                 var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 if (client.cells.length == 1) return Logger.warn("Client already has one cell!");
                 // Set client's merge override
                 client.mergeOverride = !client.mergeOverride;
@@ -625,7 +623,6 @@ Commands.list = {
         for (var i in gameServer.clients) {
             if (gameServer.clients[i].playerTracker.pID == id) {
                 var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 for (var i = 0; i < count; i++) {
                     gameServer.splitCells(client);
                 }
@@ -652,7 +649,6 @@ Commands.list = {
         // Change name
         for (var i = 0; i < gameServer.clients.length; i++) {
             var client = gameServer.clients[i].playerTracker;
-            if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
             if (client.pID == id) {
                 Logger.print("Changing " + getName(client._name) + " to " + name);
                 client.setName(name);
@@ -708,7 +704,7 @@ Commands.list = {
         Logger.print("\nCurrent players: " + gameServer.clients.length);
         Logger.print('Do "playerlist m" or "pl m" to list minions\n');
         Logger.print(" ID     | IP              | P | CELLS | SCORE  |   POSITION   | " + fillChar('NICK', ' ', gameServer.config.playerMaxNickLength) + " "); // Fill space
-        Logger.print(fillChar('', '─', ' ID     | IP              | CELLS | SCORE  |   POSITION   |   |  '.length + gameServer.config.playerMaxNickLength));
+        Logger.print(fillChar('', 'â”€', ' ID     | IP              | CELLS | SCORE  |   POSITION   |   |  '.length + gameServer.config.playerMaxNickLength));
         var sockets = gameServer.clients.slice(0);
         sockets.sort(function (a, b) { return a.playerTracker.pID - b.playerTracker.pID; });
         for (var i = 0; i < sockets.length; i++) {
@@ -762,7 +758,6 @@ Commands.list = {
                 Logger.print(" " + id + " | " + ip + " | " + protocol + " | " + cells + " | " + score + " | " + position + " | " + nick);
             } else {
                 // No cells = dead player or in-menu
-                data = fillChar('DEAD OR NOT PLAYING', '-', ' | CELLS | SCORE  | POSITION    '.length + gameServer.config.playerMaxNickLength, true);
                 Logger.print(" " + id + " | " + ip + " | " + protocol + " | " + data);
             }
         }
@@ -782,7 +777,6 @@ Commands.list = {
         for (var i in gameServer.clients) {
             if (gameServer.clients[i].playerTracker.pID == id) {
                 var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 // set frozen state
                 client.frozen = !client.frozen;
                 if (client.frozen) Logger.print("Froze " + getName(client._name));
@@ -842,7 +836,6 @@ Commands.list = {
         for (var i in gameServer.clients) {
             if (gameServer.clients[i].playerTracker.pID == id) {
                 var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 for (var j in client.cells) {
                     client.cells[j].position.x = pos.x;
                     client.cells[j].position.y = pos.y;
@@ -916,7 +909,6 @@ Commands.list = {
         for (var i in gameServer.clients) {
             if (gameServer.clients[i].playerTracker.pID == id) {
                 var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 while (client.cells.length > 0) {
                     var cell = client.cells[0];
                     gameServer.removeNode(cell);
@@ -953,7 +945,6 @@ Commands.list = {
         for (var i in gameServer.clients) {
             if (gameServer.clients[i].playerTracker.pID == id) {
                 var client = gameServer.clients[i].playerTracker;
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 var virus = new Entity.Virus(gameServer, null, client.centerPos, gameServer.config.virusMinSize);
                 gameServer.addNode(virus);
                 Logger.print("Popped " + getName(client._name));
@@ -990,7 +981,6 @@ Commands.list = {
                     }
                     cell.setSize(gameServer.config.playerMinSize);
                 }
-                if (!client.cells.length) return Logger.warn("That player is either dead or not playing!");
                 Logger.print("Successfully exploded " + getName(client._name));
             }
         }
