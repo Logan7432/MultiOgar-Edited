@@ -12,10 +12,10 @@ iger
 ger
   
 a  nal
-f 
-u 
-c 
-k 
+f u
+f cc
+u c
+c k
 nal
 ana
 n al
@@ -70,6 +70,9 @@ blo w
 die
 tard
 hore
+kill
+gay
+lesbian
 k unt
 kun t
 h o e
@@ -854,6 +857,23 @@ Querulant
 Rat
 Rat-fink
 Reject
+faak
+feck
+phuk
+phock
+feq
+fock
+pheck
+fark
+fudge
+uckfay
+funk dat
+f-j00
+fizzuck
+fook
+fcuk
+phuq
+fuq
 Retard
 Riff-Raff
 Ripper
@@ -862,6 +882,11 @@ Rowdy
 Rufian
 Sack
 Sadist
+fuck
+fcuk
+fkcu
+fkuc
+shit
 Saprophyt
 Satan
 Scarab
